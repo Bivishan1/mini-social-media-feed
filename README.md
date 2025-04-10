@@ -36,7 +36,7 @@ npm install
 npm run dev
 ```
 
-This will start the development server at http://localhost:8080.
+This will start the development server at http://localhost:5173.
 
 ## Project Structure
 
@@ -65,6 +65,7 @@ This will start the development server at http://localhost:8080.
 ## Login Credentials
 
 For testing purposes, you can log in using the following credentials:
+
 - Username: user
 - Password: password
 
