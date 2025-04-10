@@ -1,0 +1,152 @@
+/* @import 'tailwindcss/base'; */
+@import "tailwindcss";
+/* @tailwind components; */
+@tailwind utilities;
+@import 'tailwindcss/utilities';
+
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color:rgb(248, 0, 0);
+  }
+  a:hover {
+    color: #747bff;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+
+
+/* Dark Mode */
+.dark {
+  --background: 222.2 47.4% 11.2%;
+  --foreground: 210 40% 98%;
+  
+  --primary: 210 40% 98%;
+  --primary-foreground: 222.2 47.4% 11.2%;
+  
+  --secondary: 217.2 32.6% 17.5%;
+  --secondary-foreground: 210 40% 98%;
+  
+  --accent: 217.2 32.6% 17.5%;
+  --accent-foreground: 210 40% 98%;
+  
+  --popover: 222.2 47.4% 11.2%;
+  --popover-foreground: 210 40% 98%;
+  
+  --card: 222.2 47.4% 11.2%;
+  --card-foreground: 210 40% 98%;
+  
+  /* Dark Mode Sidebar */
+  --sidebar-background: 217.2 32.6% 17.5%;
+  --sidebar-foreground: 210 40% 98%;
+  --sidebar-primary: 210 40% 98%;
+  --sidebar-primary-foreground: 222.2 47.4% 11.2%;
+  --sidebar-accent: 215 16.3% 46.9%;
+  --sidebar-accent-foreground: 210 40% 98%;
+  --sidebar-border: 217.2 32.6% 17.5%;
+  --sidebar-ring: 222.2 84.2% 55.2%;
+}
+
+
+
+/* Border Radius */
+[class*="-radius"] {
+  border-radius: var(--radius);
+}
+
+
+/* Container */
+
+
+/* Border Radius */
+@layer utilities {
+  .rounded-lg {
+    border-radius: var(--radius);
+  }
+  .rounded-md {
+    border-radius: calc(var(--radius) - 2px);
+  }
+  .rounded-sm {
+    border-radius: calc(var(--radius) - 4 px);
+  }
+}
+
+/* Keyframes and Animations */
+@layer components {
+  @keyframes accordion-down {
+    from {
+      height: 0;
+    }
+    to {
+      height: var(--radix-accordion-content-height);
+    }
+  }
+  
+  @keyframes accordion-up {
+    from {
+      height: var(--radix-accordion-content-height);
+    }
+    to {
+      height: 0;
+    }
+  }
+
+  .accordion-down {
+    animation: accordion-down 0.2s ease-out;
+  }
+
+  .accordion-up {
+    animation: accordion-up 0.2s ease-out;
+  }
+}
+
+* Define Keyframes for Animations */
+@keyframes accordion-down {
+  from {
+    height: 0;
+  }
+  to {
+    height: var(--radix-accordion-content-height);
+  }
+}
+
+@keyframes accordion-up {
+  from {
+    height: var(--radix-accordion-content-height);
+  }
+  to {
+    height: 0;
+  }
+}
+
+/* Add Custom Utilities */
+@layer utilities {
+  .animate-accordion-down {
+    animation: accordion-down 0.2s ease-out;
+  }
+
+  .animate-accordion-up {
+    animation: accordion-up 0.2s ease-out;
+  }
+
+  .border-radius-lg {
+    border-radius: var(--radius);
+  }
+
+  .border-radius-md {
+    border-radius: calc(var(--radius) - 2px);
+  }
+
+  .border-radius-sm {
+    border-radius: calc(var(--radius) - 4px);
+  }
+}
+
+/* Plugin for Animations */
+
+/* Plugins */
+/* @import "tailwindcss-animate";  */
